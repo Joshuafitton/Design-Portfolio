@@ -1,0 +1,1762 @@
+/* HOMEPAGE */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-image: url('Images/Blackbackdrop.png'); /* Replace with the actual path to your image */
+
+}
+
+/* ... (rest of your styles remain unchanged) */
+
+/* Header styles */
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 9%; /* Adjusted padding for better responsiveness */
+    background: #00000080; /* Semi-transparent black background */
+}
+
+.logo {
+    position: relative; /* Necessary for absolute positioning of children */
+    display: inline-block; /* Aligns with other inline elements */
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 100px; /* Uniform size */
+    height: auto;
+    transition: opacity 0.5s ease; /* Transition opacity for smooth effect */
+}
+
+.logo img.normal {
+    position: absolute; /* Layering */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Default image on top */
+    opacity: 1; /* Fully visible initially */
+}
+
+.logo img.hover {
+    position: absolute; /* Layering */
+    top: 0;
+    left: 0;
+    z-index: 0; /* Underneath initially */
+    opacity: 0; /* Fully hidden initially */
+}
+
+.logo:hover img.normal {
+    opacity: 0; /* Fades out on hover */
+}
+
+.logo:hover img.hover {
+    opacity: 1; /* Fades in on hover */
+}
+
+.logo a:hover {
+    transform: scale(1.05); /* Optional scaling effect */
+    transition: transform 0.5s ease; /* Smooth scaling transition */
+}
+
+
+/* Navlist*/
+/* Page Menu styles */
+#navlist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navlist li {
+    margin-right: 40px;
+    position: relative; /* Added position relative to create space for the dot */
+    margin-bottom: 10px;
+}
+
+#navlist a {
+    text-decoration: none;
+    color: #EAE6E3;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    padding: 10px 15px;
+    transition: color 0.3s ease; /* Added transition for color change */
+}
+
+#navlist a:hover {
+    color: #53A281; /* Change text color when hovering */
+}
+
+#navlist a.active {
+    color: #53A281; /* Change link color when active */
+}
+
+#navlist a.active::after {
+    content: "\2022"; /* Unicode character for bullet (you can customize this) */
+    color: #53A281; /* Dot color */
+    position: absolute;
+    bottom: -25px; /* Adjust the distance from the text */
+    left: 50%; /* Position in the middle of the link */
+    transform: translateX(-50%);
+    font-size: 24px; /* Adjust the size of the dot */
+}
+
+
+.hero-text {
+    color: #EAE6E3;
+    max-width: 500px;
+    margin: 0 auto; /* Center the element horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    text-align: center; /* Center the text */
+}
+
+
+.hero-text h1 {
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 130px;
+    line-height: 0.5;
+    color: #EAE6E3;
+    padding-top: 20px;
+    margin: 0 0 45px;
+    white-space: nowrap;
+    padding-top: 200px;
+}
+
+.hero-text h2 {
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text a {
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-text h3 {
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 1.6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+/* Social media icons styles */
+.icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    z-index: 1000;
+}
+
+.icons a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 24px;
+    color: #D6D6D6;
+    transition: transform 0.3s ease, color 0.3s ease; /* Add color transition for hover effect */
+}
+
+.icons a:hover {
+    transform: scale(1.1); /* Enlarge the icon on hover */
+    color: #53A281; /* Change the color to green on hover */
+}
+
+/*Responsive Functions*/
+.hero {
+    height: 101vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 9%;
+    background-image: url('Images/backdrop.png'); /* Replace with the actual path to your image */
+    background-size: cover; /* Ensure the background image covers the entire section */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #EAE6E3; /* Set text color to contrast with the background image */
+}
+/* ... (rest of your existing styles) */
+
+/* Responsive styles for screen width equal to or less than 680px */
+@media (max-width: 680px) {
+    header {
+        padding: 20px 5%; /* Adjusted padding for better responsiveness */
+        
+    }
+    @media (max-width: 680px) {
+        .logo {
+            text-align: center;
+            width: 100%; /* Ensure the logo takes up the full width */
+        }
+    }
+    
+    .navlist {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .navlist.open {
+        display: flex;
+    }
+
+    .navlist li {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .hero-text {
+        max-width: 100%; /* Ensure text takes full width on smaller screens */
+        text-align: center; /* Center-align text within the hero section */
+    }
+
+    .hero-text h5,
+    .hero-text h1,
+    .hero-text h4,
+    .hero-text p,
+    .hero-text a {
+        text-align: center; /* Center-align individual text elements within the hero section */
+        padding-top: -200px;
+    
+    }
+}
+
+/* ... (rest of your styles remain unchanged) */
+
+
+
+/*Portfolio Page*/
+
+.Title-section-port {
+    color: #EAE6E3;
+    background: transparent; /* Transparent background */
+    height: 20px;
+    padding-bottom: 120px;
+}
+
+.Title-section-port h1{
+    color: #EAE6E3;
+    background: transparent; /* Transparent background */
+
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    font-size: 100px;
+}
+.Title-section-port h2{
+    color: #EAE6E3;
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.portfolio {
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px 0;
+    background-image: url('Images/backdrop.png'); /* Replace with the actual path to your image */
+
+}
+
+.portfolio h1 {
+    color: #EAE6E3;
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.portfolio-item p {
+    font-size: 18px;
+    font-family: "Lato", sans-serif;
+    font-weight: 200;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Adjust the gap value to reduce space between items */
+    justify-content: center;
+    align-items: center;
+}
+
+
+.portfolio-item {
+    background: #00000080;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: auto; /* Center the item horizontally */
+    width: 85%;
+    height: 420px; /* Set a fixed height for the portfolio item box */
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portfolio-item img {
+    width: 100%; /* Make the image responsive */
+    height: 290px; /* Set a fixed height for the images within the box */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+    margin-bottom: 10px;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add black shadow on hover */
+    transition: box-shadow 0.3s ease; /* Add transition effect */
+
+}
+
+.portfolio-item:hover {
+    background-image: linear-gradient(to bottom right, #53A281, #297373);
+    
+    transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 680px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* General link styles */
+a {
+    color: #2d614e; /* Default link color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for link color change */
+}
+
+a:hover {
+    color: #2d614e; /* Change link color on hover */
+}
+
+/* Links inside .portfolio-item */
+.portfolio-item a {
+    color: #2d614e; /* Default link color for portfolio items */
+}
+
+.portfolio-item a:hover {
+    color: #2d614e; /* Change link color on hover for portfolio items */
+}
+
+
+
+/* Additional styles for the about me page */
+
+.about {
+    text-align: center;
+    margin: 50px 0;
+    padding: 0px 0;
+    background: transparent;
+    padding-top: 15px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row; /* Set the direction to row */
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content img {
+    width: 400px;
+    height: 400px;
+    border-radius: 360px;
+    margin-right: 20px; /* Add margin to separate the image from the text */
+}
+
+.text-content h1 {
+    color: #53A281;
+    line-height: 1.6;
+    max-width: 900px;
+    text-align: left; /* Align the text to the left */
+    padding-left: 50px;
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 100px;
+}
+
+.text-content p {
+    color: #EAE6E3;
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 700px;
+    text-align: left; /* Align the text to the left */
+    padding-left: 50px;
+}
+
+.text-content h2 {
+    color: #EAE6E3;
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic; /* Make the font italic */
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 600px;
+    text-align: left; /* Align the text to the left */
+    padding-left: 50px;
+    margin-top: 20px;
+}
+.about-content h2 i.bx {
+    font-size: 20px; /* Adjust the font size as needed */
+    margin-right: 5px;
+}
+
+.text-content h3 {
+    color: #EAE6E3;
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 600px;
+    text-align: left; /* Align the text to the left */
+    padding-left: 50px;
+    margin-top: 5px;
+}
+
+
+/* Additional styles for the about me page */
+
+.green-button {
+    display: inline-block;
+    color: #EAE6E3;
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    background: linear-gradient(to bottom right, #53A281, #297373);
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 30px;
+    transition: transform 0.3s ease; /* Only transform property for smoother animation */
+    margin-top: 20px; /* Add margin to separate the button from the text */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Box shadow for button */
+
+}
+
+.green-button:hover {
+    transform: scale(1.05); /* Enlarge the button on hover */
+    background: transparent; /* Transparent background */
+    color:#30ab78;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Drop shadow for text */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Box shadow for button */
+    border: 1px solid #30ab78;
+    transform: scale(1.1);
+}
+
+/* Additional styles for the contact page */
+
+.contact-details {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between contact details and skills */
+}
+
+.Skill-details {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between contact details and skills */
+}
+
+.contact-left {
+    width: 40%; /* Set width for contact details */
+    text-align: left; /* Align text to the left */
+    position: relative; /* Add position relative to position the line */
+}
+
+.contact-left h2{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    margin-right: 100px;
+}
+
+
+.contact-left::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    background-color: #1a1a1a; /* Color of the vertical line */
+}
+
+.contact-left ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-top: 30px; /* Remove default padding */
+    margin-right: 100px;
+}
+
+.contact-left ul li {
+    margin-bottom: 30px; /* Increase space between items */
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    width: auto;
+}
+
+
+.skills {
+    width: 100%;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.skills h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    text-align: left;
+}
+
+.skills h3 {
+    font-size: 20px;
+    padding-bottom: 20px;
+    text-align: left; /* Center align the skills headings */
+}
+
+.skills-heading {
+    margin-top: 0;
+}
+
+.skill-category {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+
+.software-skills,
+.technical-skills,
+.coding-skills {
+    width: 30%; /* Adjust width as needed */
+    text-align: left; /* Center align text */
+    margin-right: 2%; /* Add a small margin between sections */
+    margin-left: 10px; /* Adjust the left margin to move the skill categories slightly to the right */
+}
+
+.software-skills,
+.technical-skills,
+.coding-skills:last-child {
+    margin-right: 0; /* Remove margin for the last section */
+}
+
+.software-skills ul,
+.technical-skills ul,
+.coding-skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.software-skills ul li,
+.technical-skills ul li,
+.coding-skills ul li {
+    margin-bottom: 5px;
+}
+
+/* Photography Page */
+
+.photography-gallery {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px;
+    color: #EAE6E3;
+}
+
+.photography-gallery h2 {
+    color: #EAE6E3;
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    text-align: center;
+    font-size: 100px;
+    padding-top: 35px;
+    padding-bottom: 60px;
+}
+
+.photo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.photo-item {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-item:hover {
+    transform: scale(1.1); /* Enlarge the photo on hover */
+}
+
+.carousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.carousel-content {
+    position: relative;
+}
+
+.carousel-content img {
+    width: 33.333vw; /* Set the width to 1/6 of the viewport width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 80vh; /* Limit the height to 80% of the viewport height */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+}
+
+/* ... (previous styles remain unchanged) */
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #EAE6E3;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #EAE6E3;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+/* End of Photography Page */
+
+/* Section styles */
+section {
+    padding: 80px 0; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.section-content {
+    max-width: 800px;
+    margin: 0 auto;
+    
+}
+.aboutsection-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+
+    
+}
+
+/* Top Section specific styles */
+
+.Top-Background {
+    background-color: #000000;
+    padding-bottom: 0px;
+    background-image: url('Images/backdrop.png'); /* Replace with the actual path to your image */
+}
+.top-section {
+    background: url('Portfolio\ cover\ picture.png') center/cover;
+    color: #EAE6E3;
+    background-color: #4d9559;
+}
+
+.top-section img {
+    width: 100%;
+    max-width: 600px; /* Adjust max-width as needed */
+    height: auto;
+    margin-top:0px; /* Adjust margin as needed */
+}
+
+.Title-section {
+    color: #EAE6E3;
+    background-color: #101010;
+    font-weight: 400;
+    font-style: normal;;
+    text-align: left;
+}
+.Title-section h1 {
+    font-size: 120px; /* Adjust the font size as needed */
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;;
+    text-align: left;
+    color: #EAE6E3;
+}
+.Title-section h2 {
+    font-size: 30px; /* Adjust the font size as needed */
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;;
+    text-align: left;
+}
+
+
+.Title-section p {
+    font-size: 15px; /* Adjust the font size as needed */
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;;
+    text-align: left;
+}
+.awhite-section {
+    background-color: #EAE6E3; /* Adjust background color as needed */
+    position: relative; /* Add position relative */
+    overflow: hidden; /* Clear any floats */
+}
+
+.awhite-section h2 {
+    padding-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.white-section {
+    background-color: #1a1a1a; /* Adjust background color as needed */
+    position: relative; /* Add position relative */
+    overflow: hidden; /* Clear any floats */
+
+}
+
+.zomp-section {
+    background-color: #53A281; /* Adjust background color as needed */
+    position: relative; /* Add position relative */
+    overflow: hidden; /* Clear any floats */
+}
+
+
+.white-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* Adjust the width of the line */
+   height: 1px; /* Adjust the thickness of the line */
+   background-color: #f5f5f5; /* Adjust line color */
+}
+
+
+
+.white-section img {
+    width: 100%;
+    max-width: 600px; /* Adjust max-width as needed */
+    height: auto;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.zomp-section img {
+    width: 100%;
+    max-width: 600px; /* Adjust max-width as needed */
+    height: auto;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+
+
+
+.white-section h1 {
+    padding-bottom: 20px;
+    color: #EAE6E3;
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 40px;
+}
+.zomp-section h1 {
+    padding-bottom: 20px;
+    color: #EAE6E3;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.white-section h3 {
+    color: #EAE6E3;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+.zomp-section h3 {
+    color: #EAE6E3;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:100;
+    font-style: normal;
+}
+
+.white-section p {
+    color: #EAE6E3;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.white-section h4 {
+    color: #EAE6E3;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.zomp-section p {
+    color: #EAE6E3;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:100;
+    font-style: normal;
+}
+
+
+.white-section .Task-container {
+    padding-left: 10px; /* Adjust padding for space between the text and the line */
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.white-section .section-content .Task-item {
+    border-left: 1px solid #1a1a1a; /* Add left-hand border */
+    padding-left: 10px; /* Add padding for space between the border and content */
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+
+.fgoal-circles {
+    display: flex;
+    justify-content: center; /* Align circles horizontally to the center */
+    align-items: center; /* Align circles vertically to the center */
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+
+}
+
+.fgoal-circle-container {
+    text-align: center;
+    position: relative; /* Set container to relative position */
+    transition: transform 0.8s ease; /* Add transition for smooth animation */
+    margin: 10px; /* Add margin to create space between each circle container */
+}
+
+.fgoal-circle {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom, #53A281, #297373); /* Gradient from green to dark green */
+    border-radius: 50%;
+    margin: 20px;
+    position: relative; /* Set circle to relative position */
+    transition: transform 0.3s ease; 
+}
+
+.vgoal-circle {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to bottom, #2CAC9C, #1B4842); /* Gradient from green to dark green */
+    border-radius: 50%;
+    margin: 20px;
+    position: relative; /* Set circle to relative position */
+    transition: transform 0.3s ease; 
+}
+
+.fcircle-text {
+    color: #EAE6E3;
+    font-family:  "Lato", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    position: absolute; /* Set text to absolute position */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the text precisely */}
+
+.fcircle-description {
+    
+    line-height: 1.4;
+    word-wrap: break-word;
+    max-width: 100%;
+    margin: 20px auto 40px;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.fgoal-circle-container:hover {
+    transform: scale(1.1);
+}
+
+/* New CSS for bullet points */
+
+.fcircle-bullets {
+    color: #EAE6E3;
+    text-align: left;
+    margin-top: 10px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; /* Set position to relative */
+}
+
+.fcircle-bullets ul {
+    list-style-type: disc;
+}
+
+.fcircle-bullets ul li {
+    margin-bottom: 5px;
+}
+
+
+/* User Research */
+
+.mural-image-container img {
+    width: 100%; /* Make the images fill the width of their container */
+    max-width: 100%; /* Ensure the images don't exceed their original size */
+    height: auto; /* Maintain the aspect ratio of the images */
+    display: block; /* Ensure proper rendering */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Apply transition effect on transform and box-shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.mural-image-container:hover img {
+    transform: scale(1.05); /* Enlarge the image slightly on hover */
+}
+
+
+
+
+
+/* Brand Analysis */
+
+.compimage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.compimage-container img {
+    display: inline-block;
+    width: 80%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+}
+
+.Prodimage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Prodimage-container img {
+    display: inline-block;
+    width: 130%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+}
+
+.Prodimage-container img:hover {
+    transform: scale(1.05); /* Enlarge the icon on hover */
+}
+
+.ProdStrengths {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+
+.ProdStrengths ul {
+    text-align: left;
+    padding-left: 50px; /* Adjust as needed */
+}
+
+.ProdStrengths ul li {
+    list-style-type: disc; /* Or any other list style type you prefer */
+}
+
+
+.ProdWeakness{
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding-top: 30px;
+}
+
+.ProdWeakness h2{
+    color: rgb(0, 0, 0);
+    text-align: center; /* Center align the h2 */
+}
+
+.ProdWeakness ul {
+    text-align: left;
+    padding-left: 50px; /* Adjust as needed */
+}
+
+.ProdWeakness ul li {
+    list-style-type: disc; /* Or any other list style type you prefer */
+}
+
+.Rival-container {
+    display: flex; /* Use flexbox to align Rivals side by side */
+    justify-content: center; /* Center the Rivals horizontally */
+    align-items: flex-start; /* Align Rivals at the top vertically */
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+}
+
+.Rival {
+    width: calc(33.33% - 20px); /* Set width for each Rival (minus margins and spacing) */
+    margin: 10px; /* Add margin to separate Rivals */
+}
+
+
+.Rival-container {
+    display: flex; /* Use flexbox to align Rivals side by side */
+    justify-content: center; /* Center the Rivals horizontally */
+    align-items: flex-start; /* Align Rivals at the top vertically */
+    flex-wrap: wrap; /* Allow flex items to wrap to the next line */
+}
+
+.Strengths-header {
+    text-align: center;
+    margin-top: 10px; /* Adjust margin as needed */
+}
+
+
+.scircle-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.scircle {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom, #53A281, #297373); /* Gradient from green to dark green */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px; /* Added margin to spread circles apart */
+    position: relative; /* Ensure position relative for absolute positioning */
+    transition: transform 0.3s ease; /* Add transition effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow with blur effect */
+}
+
+.scircle-number {
+    font-size: 16px;
+    font-weight: 300;
+    font-family:"Lato", sans-serif;
+    text-align: center; /* Center the text horizontally */
+    position: absolute;
+    bottom: -50px; /* Increase distance between circle and number */
+    width: 100%; /* Ensure number spans the entire width of the circle */
+    color: #EAE6E3;
+}
+
+.scircle-title {
+    font-size: 25px;
+    text-align: center; /* Center the text horizontally */
+    line-height: 1.2; /* Ensure consistent vertical alignment */
+    margin: 0; /* Remove any default margin */
+    color: #EAE6E3;
+}
+
+.scircle:hover {
+    transform: scale(1.050); /* Enlarge the image on hover */
+    background: #297373;
+}
+
+
+
+.Lo-Fi{
+    display: flex;
+    justify-content: center;
+}
+
+.Lo-Fi img{
+    width: 1000px;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin-top: 20px;
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.Lo-Fi img:hover {
+    transform: scale(1.050); /* Enlarge the image on hover */
+}
+
+.Logo{
+    display: flex;
+    justify-content: center;
+}
+
+.Logo img{
+    width: 400px;
+    height: auto;
+    margin-top: 20px;
+    transition: transform 0.3s ease; /* Add transition effect */
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+
+.Logo img:hover {
+    transform: scale(1.050); /* Enlarge the image on hover */
+}
+
+
+/* Black Dahlia */
+.top-sectionBD {
+    background: url('Dahlia.jpg') center/cover;
+    color: #EAE6E3;
+    background-color: #4d9559;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow circles to wrap to the next line */
+}
+
+.circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 15px; /* Adjust spacing between circles */
+    position: relative;
+    margin-bottom: 65px;
+    margin-top: 60px;
+    box-shadow: 0 0 5px rgba(54, 54, 54, 0.5); /* Add white shadow on hover */
+    transition: transform 0.3s ease; /* Adding transition for smooth scaling */
+    display: flex;
+    flex-direction: column; /* Arrange child elements vertically */
+    justify-content: center;
+    align-items: center;
+    color: white; /* Set the text color */
+}
+
+.circle p {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+    color: transparent; /* Set default text color to transparent */
+    transition: color 0.3s ease; /* Add transition effect for smooth color change */
+}
+
+.circle:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    box-shadow: 0 0 15px rgba(55, 55, 55, 0.5); /* Add white shadow on hover */
+    
+}
+
+.circle:hover p {
+    color: var(--hover-color); /* Change text color to hover color on hover */
+}
+
+
+.black-box {
+    width: 110px; /* Adjust width as needed */
+    height: 110px; /* Adjust height as needed */
+    background-color: #EAE6E3;
+    border: 2px solid #000000; /* Add a black border with a thickness of 2px */
+    margin: 0 auto; /* Centers the black box horizontally */
+    margin-bottom: 80px;
+    margin-top: 60px; /* Adjust the margin-top value to position it below the color name container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center text horizontally */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+}
+
+.text-container h2 {
+    margin: 0; /* Remove default margin */
+    text-decoration: underline; /* Add underline to h1 */
+    color: #EAE6E3;
+    font-size: 50px;
+    font-weight: 200;
+    margin-bottom: 0px; /* Adjust margin-bottom as needed */
+}
+
+.text-container h3 {
+    margin: 0; /* Remove default margin */
+    color: #000000;
+    font-size: 15px;
+    font-weight: 200;
+    margin-top: 0px; /* Adjust margin-top as needed */
+}
+
+
+.heading-container {
+    display: flex;
+    justify-content: space-between; /* Evenly space headings */
+    margin-top: 40px; /* Adjust as needed */
+    font-family: "Montserrat", sans-serif;
+}
+
+.heading-container h2 {
+    margin: 0; /* Remove default margin */
+    color: #000000;
+    
+}
+
+.paragraph-heading {
+    margin-top: 20px; /* Adjust as needed */
+    margin-bottom: 0px; /* Adjust as needed */
+    font-family: "Montserrat", sans-serif;
+}
+.paragraph-heading h2{
+    color: #000000;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.paragraph-container {
+    margin-top: 0px; /* Adjust as needed */
+    font-family: "Montserrat", sans-serif;
+}
+.paragraph-container p{
+    color: #000000;
+    font-weight: 100;
+}
+
+
+
+.Styleguidelogo {
+    margin-top: 300px; /* Add vertical space */
+}
+
+.Styleguidelogo h2 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.Styleguidelogo img {
+    display: inline-block; /* Display images as inline-block */
+    width: 300px; /* Initial width of the images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 40px; /* Adjust margin between the images */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.Styleguidelogo img:hover {
+    transform: scale(1.05); /* Enlarge the image on hover */
+}
+
+
+
+
+.SWOTcircle {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    background-color: #EAE6E3; /* Change color as needed */
+    border-radius: 50%; /* Ensures it's a circle */
+    margin: 20px auto; /* Centers horizontally and adds space below */
+    z-index: 0; /* Set z-index to a value higher than the red circle */
+    margin-top: 160px;
+    margin-bottom: 80px;
+}
+
+.SWOTinner-circle {
+    position: absolute;
+    width: 90px; /* Adjust size as needed */
+    height: 90px; /* Adjust size as needed */
+    background-color: #EAE6E3; /* Change color as needed */
+    border-radius: 50%; /* Ensures it's a circle */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering */
+    z-index: 2; /* Ensure it's above the cross */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SWOTouter-circle {
+    position: absolute;
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    background-color: #333; /* Change color as needed */
+    border-radius: 50%; /* Ensures it's a circle */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering */
+    z-index: -4; /* Ensure it's below the other circles */
+}
+
+
+
+.SWOTtext {
+    color: rgb(6, 6, 6);
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center; /* Center text horizontally */
+    line-height: 1; /* Ensure text is centered vertically */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centering the text */
+    z-index: 4; /* Ensure it's in front of other elements including red lines */
+}
+.horizontal-line-Invisible,
+.horizontal-line {
+    position: absolute;
+    width: 105px; /* Width of the horizontal line */
+    height: 10px; /* Height of the horizontal line */
+    background-color: #EAE6E3; /* Color of the horizontal line */
+    top: calc(50% - 5px); /* Positioning the line in the center of the circle */
+    left: 50%;
+    transform: translateX(-50%); /* Centering the line */
+    z-index: 2; /* Ensure it's in front of the green circle */
+}
+
+.vertical-line-Invisible,
+.vertical-line {
+    position: absolute;
+    width: 10px; /* Width of the vertical line */
+    height: 105px; /* Height of the vertical line */
+    background-color: #EAE6E3; /* Color of the vertical line */
+    top: 50%;
+    left: calc(50% - 5px); /* Positioning the line in the center of the circle */
+    transform: translateY(-50%); /* Centering the line */
+    z-index: 2; /* Ensure it's in front of the green circle */
+}
+
+/* Existing styles */
+
+.topvertical-line-center {
+    position: absolute;
+    width: 2px; /* Adjust width as needed */
+    height: 20vh; /* Set height to cover the entire viewport */
+    background-color: #333333; /* Color of the vertical line */
+    left: 50%; /* Align in the center horizontally */
+    transform: translateX(-50%); /* Centering the line horizontally */
+    margin-top: 20px;
+}
+
+.bottomvertical-line-center {
+    position: absolute;
+    width: 2px; /* Adjust width as needed */
+    height: 20vh; /* Set height to cover the entire viewport */
+    background-color: #333333; /* Color of the vertical line */
+    left: 50%; /* Align in the center horizontally */
+    transform: translateX(-50%); /* Centering the line horizontally */
+    bottom: 0; /* Position at the bottom */
+    margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+.left-horizontal-line-center {
+    position: absolute;
+    width: 40vh; /* Set width to cover the entire viewport */
+    height: 2px; /* Adjust height as needed */
+    background-color: #333333; /* Color of the horizontal line */
+    top: 63%; /* Align in the center vertically */
+    transform: translateY(-50%); /* Centering the line vertically */
+    right: calc(50% + 50px); /* Position it to the right of the SWOT circle */
+}
+
+.right-horizontal-line-center {
+    position: absolute;
+    width: 40vh; /* Set width to cover the entire viewport */
+    height: 2px; /* Adjust height as needed */
+    background-color: #333333; /* Color of the horizontal line */
+    top: 63%; /* Align in the center vertically */
+    transform: translateY(-50%); /* Centering the line vertically */
+    left: calc(50% + 50px); /* Position it to the right of the SWOT circle */
+}
+
+.title-top-left {
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    left: calc(50% - 40px - 75px - 100px); /* Adjust position as needed */
+    top: calc(50% - 40px - 90px); /* Adjust position as needed */
+}
+
+.title-top-right {
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    right: calc(50% - 40px - 79px - 100px); /* Adjust position as needed */
+    top: calc(50% - 40px - 90px); /* Adjust position as needed */
+}
+
+.title-bottom-left {
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    left: calc(50% - 40px - 100px - 90px); /* Adjust position as needed */
+    bottom: calc(20px); /* Adjust position as needed */
+}
+
+.title-bottom-right {
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    right: calc(50% - 40px - 70px - 100px); /* Adjust position as needed */
+    bottom: 20px; /* Adjust position as needed */
+}
+
+.S-rectangle {
+    width: 302px; /* Adjust width as needed */
+    height: 140px; /* Adjust height as needed */
+    background-color: #1a1a1a; /* Color of the vertical line */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    position: absolute;
+    left: calc(50% - 95px - 120px - 100px);
+    top: calc(50% - -5px - 80px); /* Adjust position as needed */
+    border-radius: 10px;
+    transition: background-color 0.4s ease, border-color 0.8s ease; /* Adjust transition timing for smoother effect */
+
+}
+.W-rectangle {
+    width: 302px; /* Adjust width as needed */
+    height: 140px; /* Adjust height as needed */
+    background-color: #1a1a1a; /* Color of the vertical line */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    position: absolute;
+    right: calc(50% - 40px - 175px - 100px); /* Adjust position as needed */
+    top: calc(50% - -5px - 80px); /* Adjust position as needed */
+    border-radius: 10px;
+    transition: background-color 0.4s ease, border-color 0.8s ease; /* Adjust transition timing for smoother effect */
+}
+
+.O-rectangle {
+    width: 302px; /* Adjust width as needed */
+    height: 140px; /* Adjust height as needed */
+    background-color: #1a1a1a; /* Color of the vertical line */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    position: absolute;
+    left: calc(50% - 95px - 120px - 100px); /* Adjust position as needed */
+    top: calc(50% - -173px - 90px); /* Adjust position as needed */
+    border-radius: 10px;
+    transition: background-color 0.4s ease, border-color 0.8s ease; /* Adjust transition timing for smoother effect */
+}
+.T-rectangle {
+    width: 302px; /* Adjust width as needed */
+    height: 140px; /* Adjust height as needed */
+    background-color: #1a1a1a; /* Color of the vertical line */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    position: absolute;
+    right: calc(50% - 40px - 175px - 100px); /* Adjust position as needed */
+    top: calc(50% - -173px - 90px); /* Adjust position as needed */
+    border-radius: 10px;
+    transition: background-color 0.4s ease, border-color 0.8s ease; /* Adjust transition timing for smoother effect */
+}
+
+
+
+
+.architecture-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.page-box {
+    width: 150px;
+    padding: 8px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    margin: 40px 3px; /* Original space between boxes */
+    position: relative;
+    background-color: #000;
+}
+
+.page-box h3 {
+    margin-top: 0;
+    font-size: 14px;
+    color: #EAE6E3;
+}
+
+.branch-box p {
+    margin: 3px 0;
+    font-size: 12px;
+    color:#000000;
+}
+
+.page-container {
+    display: flex;
+}
+
+.connecting-line-vertical {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(84% - 50%);
+    background-color: #000000;
+}
+
+.connecting-line-horizontal {
+    position: absolute;
+    top: calc(100% + 40px); /* Positioning the horizontal line lower */
+    left: 50%; /* Center aligning the horizontal line */
+    transform: translateX(-50%); /* Shifting the line back by half of its width */
+    width: 533%; /* Making the horizontal line longer */
+    height: 2px;
+    background-color: #000000;
+}
+
+.vertical-line {
+    position: absolute;
+    top: -44px; /* Start from above the box */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 42px; /* Shorten the height */
+    background-color: #000000;
+}
+
+.page-box:hover {
+    border-color: rgb(0, 0, 0); /* Change border color to green on hover */
+    background-color: #EAE6E3;
+}
+
+.page-box:hover .branch-box p {
+    color: #000000; /* Change text color to green on hover */
+}
+
+.page-box:hover h3 {
+    color: rgb(0, 0, 0); /* Change h3 text color to green on hover */
+}
+
+footer {
+    color: #fff; /* Text color */
+    padding-top: 20px;
+    margin-bottom: 1px;
+    text-align: center; /* Center-align text */
+}
+
+.footer-content {
+    max-width: 800px; /* Set maximum width for content */
+    margin: 0 auto; /* Center content horizontally */
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 800px; /* Adjust as needed */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slide Images */
+.slide {
+    text-align: center;
+    display: none; /* By default, slides are hidden */
+}
+
+.slide img {
+    width: 80%; /* Ensures the image stretches to fill the container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow with blur effect */
+    
+}
+
+/* Navigation Buttons */
+.nav-button {
+    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Aligns vertically in the center */
+    transform: translateY(-50%); /* Centers vertically */
+    padding: 16px;
+    color: #EAE6E3; /* Default button color */
+    font-weight: bold;
+    transition: 0.6s ease;
+    user-select: none;
+    z-index: 10; /* Keeps buttons above other elements */
+}
+
+.prev {
+    left: 10px; /* Position on the left side of the container */
+}
+
+.next {
+    right: 10px; /* Position on the right side of the container */
+}
+
+.prev:hover, .next:hover {
+    background-color: #1a1a1a;
+    color: #53A281; /* Text color on hover */
+}
+
+/* Dot Container Below Slides */
+.dot-container {
+    text-align: center;
+    padding-top: 10px; /* Space between slides and dots */
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #ddd; /* Default color */
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active, .dot:hover {
+    background-color: #333; /* Color when active or hovered */
+}
+
+
+
+
+
+/* Styling for the Previous Page button */
+.previous-button {
+    text-decoration: none;
+    color: #EAE6E3; /* Change as desired */
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: color 0.3s;
+}
+
+.previous-button:hover {
+    color: #53A281;
+}
+
+/* Styling for the Next Page button */
+.next-button {
+    text-decoration: none;
+    color: #EAE6E3; /* Change as desired */
+    font-weight: 600;
+    font-family: "Lato", sans-serif;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: color 0.3s;
+}
+
+.next-button:hover {
+    color: #53A281;
+}
+
+
+
+
+

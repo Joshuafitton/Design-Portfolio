@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personal Portfolio | JFDesign</title>
+
+    <link rel= "stylesheet" type= "text/css" href= "Style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<body>
+    <header>
+        <a href="Home.html" class="logo">
+            <img src="Images/Portfolio logo.png" alt="JFDesign Logo" class="normal" />
+            <img src="Images/Portfolio logo hover.png" alt="JFDesign Logo Hover" class="hover" />
+        </a>
+        
+        <div class="burger-menu" id="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    
+<ul class="navlist" id="navlist">
+    <li><a href="Home.html">HOME</a></li>
+    <li><a href="Portfolio.html" class="active">PORTFOLIO</a></li>
+    <li><a href="About.html">ABOUT</a></li>
+    <li><a href="Joshua Fitton CV.pdf" target="_blank">CV</a></li>
+</ul>
+    </header>
+
+    <section class="Top-Background">
+        <div class="section-content">
+        </div>
+    </section>
+
+    <section class="top-section">
+        <div class="section-content">
+        </div>
+    </section>
+
+    <section class="Title-section">
+        <div class="section-content">
+            <h2>Website - UX/UI Research, Design, Personal Branding & Development</h2>
+            <h1>Personal Portflio</h1>
+            <p>I undertook the task of establishing an online UX Design portfolio that not only showcases my design skills and experience but also mirrors my creative style. The following segments offer insight into my step-by-step design process for developing and crafting this portfolio.</p>
+        </div>
+    </section>
+
+    <section class="white-section">
+        <div class="section-content">
+            <h3>I</h3>
+            <h1>Design Goals</h1>
+            <p>Establishing clear goals for your app before the design process ensures focused development and alignment with the intended purpose, maximizing efficiency and user satisfaction. Hover over the circles to view more details.</p>
+            <div class="fgoal-circles">
+                <div class="fgoal-circle-container">
+                    <div class="fgoal-circle">
+                        <span class="fcircle-text">Showcase Work and Skillset.</span>
+                    </div>
+                </div>
+                <div class="fgoal-circle-container">
+                    <div class="fgoal-circle">
+                        <span class="fcircle-text">Engage & Inspire Visitors.</span>
+                    </div>
+                </div>
+                <div class="fgoal-circle-container">
+                    <div class="fgoal-circle">
+                        <span class="fcircle-text">Strong Personal Branding.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="white-section">
+        <div class="section-content">
+            <h3>II</h3>
+            <h1>User Research</h1>
+            <p>Developing a research plan and conducting interviews via Mural</p>
+            <div class="mural-image-container">
+                <img src="images/Mural 1.png" alt="Mural 1">
+                <p>Above: Mural with a global consultancy recruiter.</p> 
+            </div>
+            <div class="mural-image-container">
+                <img src="images/Mural 2.png" alt="Mural 2">
+                <p>Above: Mural with a University lecturer.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Slideshow Sections -->
+    <section class="white-section">
+        <div class="section-content">
+            <h3>III</h3>
+            <h1>Empathy Maps</h1>
+            <p>I created two empathy maps from my user research to better understand my target users, helping me design a UX portfolio that meets their needs and addresses their pain points.</p>
+            <h4>Click the arrows to view each empathy map.</h4>
+            <div class="slideshow-container">
+                <a class="prev nav-button" onclick="changeSlide(-1)">&#10094;</a> <!-- Previous button -->
+                <div class="slide">
+                    <img src="Images/PF-EM1.png" alt="Slide 1 - 1" class="slide-image">
+                </div>
+                <div class="slide">
+                    <img src="Images/PF-EM2.png" alt="Slide 1 - 2" class="slide-image">
+                </div>
+                <a class="next nav-button" onclick="changeSlide(1)">&#10095;</a> <!-- Next button -->
+                <div class="dot-container"> <!-- Dots below the slides -->
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-section">
+        <div class="section-content">
+            <h3>IV</h1>
+            <h1>User Personas</h1>
+            <p>I developed empathy maps into user personas to capture key user traits, helping me design a UX portfolio that addresses their goals, needs, and frustrations.</p>
+            <h4>Click the arrows to view each user persona.</h4>
+            <div class="slideshow-container">
+                <a class="prev nav-button" onclick="changeSlide(-1)">&#10094;</a>
+                <div class="slide">
+                    <img src="Images/PF-UP1.png" alt="Slide 2 - 1" class="slide-image">
+                </div>
+                <div class="slide">
+                    <img src="Images/PF-UP2.png" alt="Slide 2 - 2" class="slide-image">
+                </div>
+                <a class="next nav-button" onclick="changeSlide(1)">&#10095;</a>
+                <div class="dot-container"> <!-- Dots below the slides -->
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-section">
+        <div class="section-content">
+            <h3>V</h1>
+            <h1>User Journey Maps</h1>
+            <p>To conclude my research, I created user journey maps for each persona to illustrate how they would use my portfolio for their specific tasks. I use this approach to help me identify opportunities to improve my portfolio's design, making it more intuitive and user-friendly.</p>
+            <h4>Click the arrows to view each user journey map.</h4>
+            <div class="slideshow-container">
+                <a class="prev nav-button" onclick="changeSlide(-1)">&#10094;</a>
+                <div class="slide">
+                    <img src="images/PF-UJM1.png" alt="Slide 3 - 1" class="slide-image">
+                </div>
+                <div class="slide">
+                    <img src="images/PF-UJM2.png" alt="Slide 3 - 2" class="slide-image">
+                </div>
+                 <a class="next nav-button" onclick="changeSlide(1)">&#10095;</a> <!-- Next button -->
+                <div class="dot-container"> <!-- Dots below the slides -->
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-section">
+        <div class="section-content">
+            <h3>VII</h3>
+            <h1>Case Study Structure</h1>
+            <p>By integrating insights from my research, I structured my portfolio to accommodate the needs, preferences, and journey stages of my target audience, ensuring a compelling and user-centric presentation of my work and skillset.</p>
+            <div class="scircle-container">
+                <div class="scircle">
+                    <span class="scircle-title"><i class='bx bx-target-lock'></i></span>
+                    <span class="scircle-number">1. Goals</span>
+                </div>
+                <div class="scircle">
+                    <span class="scircle-title"><i class='bx bx-glasses'></i></span>
+                    <span class="scircle-number">2. Research</span>
+                </div>
+                <div class="scircle">
+                    <span class="scircle-number">3. Brainstorm</span>
+                    <span class="scircle-title"><i class='bx bxs-brain'></i></span>
+                </div>
+                <div class="scircle">
+                    <span class="scircle-number">4. Design</span>
+                    <span class="scircle-title"><i class='bx bxs-edit-alt'></i></span>
+                </div>
+                <div class="scircle">
+                    <span class="scircle-number">5. Styling</span>
+                    <span class="scircle-title"><i class='bx bxs-color'></i></span>
+                </div>
+                <div class="scircle">
+                    <span class="scircle-number">6. Development</span>
+                    <span class="scircle-title"><i class='bx bx-code-alt'></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-section">
+        <div class="section-content">
+            <h3>VII</h3>
+            <h1>Sketching</h1>
+            <p>After brainstorming insights from my research, I began sketching layout ideas for my portfolio website to showcase my work professionally and clearly, ensuring an engaging user experience.</p>
+            <img src="images/Portfolio cover picture.png" alt="Section 1 Image">
+        </div>
+    </section>
+    
+    <section class="white-section">
+        <div class="section-content">
+            <h3>VIII</h3>
+            <h1>Lo-Fi Mock Design</h1>
+            <p>I translated my sketches into a low-fidelity digital mockup using Adobe XD to visualise the structure and layout of my portfolio website, allowing me to test and refine the user experience.</p>
+            <div class="Lo-Fi">
+                <img src="images/LoFi Design (Portfolio).png" alt="Section 1 Image">
+            </div>
+            
+        </div>
+    </section>
+   
+    
+   
+    <section class="white-section">
+        <div class="section-content">
+            <h3>X</h3>
+            <h1>Colour Palette</h1>
+            <p>In order to infuse my personality into the design, I carefully curated a colour palette that resonates with my personal & style.</p>
+            <div class="circle-container">
+                <div class="circle" style="--hover-color: #141414; background-color: #EAE6E3;">
+                    <p>PLATINUM</p>
+                    <p>#EAE6E3</p>
+                </div>
+                <div class="circle" style="--hover-color: #1a1a1a; background-color: #297373;">
+                    <p>MYRTLE</p>
+                    <p>#297373</p>
+                </div>
+                <div class="circle" style="--hover-color: #1a1a1a; background-color: #53A281;">
+                    <p>ZOMP</p>
+                    <p>#53A281</p>
+                </div>
+                <div class="circle" style="--hover-color: #EAE6E3; background-color: #141414;">
+                    <p>NIGHT</p>
+                    <p>#D6D6D6</p>
+                </div>
+                <div class="circle" style="--hover-color: #EAE6E3; background-color: #000000;">
+                    <p>BLACK</p>
+                    <p>#141414</p>
+                </div>
+            </div>
+            <p>The chosen colour palette represents a harmonious blend of elegance, sophistication, modernity, and professionalism, embodying a balance between timeless neutrals and vibrant accents that evoke a sense of creativity and vitality.</p>
+            <h4>Hover over each circle for colour details.</h4>
+        </div>
+    </section>
+    <section class="white-section">
+        <div class="section-content">
+            <h3>XI</h3>
+            <h1>Typeography</h1>
+            <div class="ColourText">
+                <p>I chose 'Montserrat' as the font for my app design because its modern and clean aesthetic aligns perfectly with the sleek and professional image I want to convey to users.</p>
+            </div>
+            <div class="black-box">
+                <div class="text-container">
+                    <h2>Aa</h2>
+                    <h3>Montserrat</h3>
+                </div>
+            </div>
+            <div class="heading-container">
+                    <h2>Heading 1</h2>
+                    <h2>Heading 2</h2>
+                    <h2>Subheading</h2>
+            </div>
+            <div class="paragraph-container">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-section">
+        <div class="section-content">
+            <h3>VII</h3>
+            <h1>Logo Design</h1>
+            <p>My logo is a monogram of my initials with eyes, creating a face-like effect. This design choice reflects my eye for detail and user-centered approach in UX. The eyes symbolize observation and insight, which are crucial to my visual design philosophy.</p>
+            <div class="Logo">
+                <img src="images/portfolio logo.png" alt="Final Logo Design">
+            </div>
+            <p>Above: Final Logo Design for Portofolio Site.</p>
+        </div>
+    </section>
+
+
+    <section class="white-section">
+        <div class="section-content">
+            <h3>XII</h3>
+            <h1>Prototype</h1>
+            <p>I then infused my style guide into the mockup to create a high-fidelity prototype, ensuring that my portfolio's design was consistent, visually appealing, and aligned with my personal brand.</p>
+            <img src="images/Portfolio cover picture.png" alt="Section 1 Image">
+        </div>
+    </section>
+
+    <section class="white-section">
+        <div class="section-content">
+            <h3>XIII</h3>
+            <h1>Wireframing</h1>
+            <p>Upon completing a stylised prototype, I transitioned to wireframing my portfolio design, laying the foundational structure and functionality to ensure a seamless and intuitive user experience.</p>
+            <img src="images/Portfolio cover picture.png" alt="Section 1 Image">
+        </div>
+    </section>
+
+    <section class="white-section">
+        <div class="section-content">
+            <h3>XIV</h3>
+            <h1>HTML & CSS Build</h1>
+            <p>After completing the wireframe, I began the development phase by constructing my website in VS Code, crafting each webpage using HTML, CSS & Javascript to define its layout, functionality and stylistic elements.</p>
+            <img src="images/HTMLScreenshot-Portfolio.png" alt="Section 1 Image">
+        </div>
+    </section>
+    <section class="white-section">
+        <div class="section-content">
+            <h3>XII</h3>
+            <h1>Hosting</h1>
+            <p>Once I completed the development of my portfolio website, I proceeded to launch it on the internet by hosting it on GitHub, enabling widespread accessibility and showcasing my work to a global audience and potential employers.</p>
+            <img src="images/Portfolio cover picture.png" alt="Section 1 Image">
+        </div>
+    </section>
+    <section class="white-section">
+        <div class="section-content">
+            <h3>XV</h3>
+            <h1>Final Design</h1>
+            <img src="images/Portfolio Home.png" alt="Section 1 Image">
+            <p>My home page intorduces my personality </p>
+        </div>
+    </section>
+    <section class="white-section">
+        <div class="section-content">
+            <!-- Previous Page Button -->
+            <a href="Photography.html" class="previous-button" style="float: left;">
+                &#8592; Photography Gallery
+            </a>
+            
+            <!-- Next Page Button -->
+            <a href="Voyage.html" class="next-button" style="float: right;">
+                Voyage App Design &#8594;
+            </a>
+        </div>
+    </section>
+
+    
+    
+</body>
+
+<div class="icons">
+    <a href="https://www.linkedin.com/in/joshua-fitton/"><i class="ri-linkedin-box-fill"></i></a>
+
+    <a href="https://www.instagram.com/jlfitton_/"><i class="ri-instagram-fill"></i></a>
+
+</div>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Joshua Fitton Design. All rights reserved.</p>
+    </div>
+</footer>
+</html>    
+    
