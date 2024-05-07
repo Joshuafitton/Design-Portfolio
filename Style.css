@@ -402,6 +402,7 @@ a:hover {
     flex-direction: row; /* Set the direction to row */
     align-items: center;
     justify-content: center;
+    background-colour: #1a1a1a;
 }
 
 .about-content img {
