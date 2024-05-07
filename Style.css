@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: 'Cormorant Garamond', serif;
-    background-image: url('Images/Blackbackdrop.png'); /* Replace with the actual path to your image */
+    background-image: url('Blackbackdrop.png'); /* Replace with the actual path to your image */
 
 }
 
@@ -203,7 +203,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 9%;
-    background-image: url('Images/backdrop.png'); /* Replace with the actual path to your image */
+    background-image: url('backdrop.png'); /* Replace with the actual path to your image */
     background-size: cover; /* Ensure the background image covers the entire section */
     background-position: center;
     background-repeat: no-repeat;
@@ -296,7 +296,7 @@ header {
     text-align: center;
     margin-top: 60px;
     padding: 20px 0;
-    background-image: url('Images/backdrop.png'); /* Replace with the actual path to your image */
+    background-image: url('backdrop.png'); /* Replace with the actual path to your image */
 
 }
 
@@ -736,7 +736,7 @@ section {
 .Top-Background {
     background-color: #000000;
     padding-bottom: 0px;
-    background-image: url('Images/backdrop.png'); /* Replace with the actual path to your image */
+    background-image: url('backdrop.png'); /* Replace with the actual path to your image */
 }
 .top-section {
     background: url('Portfolio\ cover\ picture.png') center/cover;
